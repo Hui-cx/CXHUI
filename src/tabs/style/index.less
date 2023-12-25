@@ -1,0 +1,50 @@
+.mk-tabs-nav {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+  border-bottom: 1px solid #dee2e6;
+}
+.mk-tabs-nav-item {
+  display: block;
+  padding: .5rem 1rem;
+  cursor: pointer;
+  &:hover, &:focus {
+    color: #1890ff ;
+  }
+  &.disabled {
+    color: #6c757d ;
+    background-color: transparent;
+    border-color: transparent;
+    cursor: default;
+    pointer-events: none;
+  }
+  &.is-active {
+    color: #1890ff ;
+  }
+}
+.nav-line {
+  .mk-tabs-nav-item {
+    &.is-active {
+      border-bottom: 1px * 2 solid #1890ff ;
+    }
+  }
+}
+
+.nav-card {
+  .mk-tabs-nav-item {
+    margin-bottom: -1px;
+    border: 1px solid transparent;
+    &.is-active {
+      @include border-top-radius(.25rem);
+      background-color: #fff;
+      border-color: #dee2e6 #dee2e6 #fff;
+      // border-color: $nav-tabs-link-active-border-color;
+    }
+  }
+}
+
+.mk-tabs-content {
+  margin-top: 1rem;
+}

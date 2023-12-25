@@ -1,0 +1,51 @@
+
+.mk-tag {
+  display: inline-block;
+  box-sizing: border-box;
+  vertical-align: middle;
+  border-radius: 3px;
+  padding: .04rem  .45rem ;
+  font-size: 1rem;
+
+  .tag-text {
+    vertical-align: middle;
+  }
+
+  .tag-close-icon {
+    margin-left: 4px;
+    vertical-align: middle;
+  }
+}
+
+.tag-lg {
+  padding: .12rem .6rem ;
+  font-size: 1.25rem;
+}
+.tag-sm {
+  padding: 1px 3px ;
+  font-size: .875rem;
+}
+@theme-colors: {
+  primary: #1890ff ;
+  secondary: #6c757d ;
+  success: #b7eb8f;
+  info: #17a2b8;
+  warning: #fadb14;
+  danger: #dc3545;
+  light: #f8f9fa ;
+  dark: #343a40
+}
+each(@theme-colors,{
+  .tag-@{key} {
+    color: @value;
+    background-color: rgba(@value, .1);
+    border: 1px solid rgba(@value, .2);
+
+    .mk-icon {
+      &:hover {
+        color: darken(@value, 10%);
+      }
+    }
+  }
+})
+

@@ -1,0 +1,159 @@
+@name: cxh-btn;
+@primary: #1677ff;
+@lightPrimary: #6199f3;
+@danger: #ff4d4f;
+@lightDanger: #f69992;
+
+.btn {
+  color: inherit;
+  text-decoration: none;
+  outline: none;
+  white-space: nowrap;
+  text-align: center;
+  font-size: 14px;
+  height: 32px;
+  padding: 4px 15px;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all .2s cubic-bezier(.645, .045, .355, 1);
+  user-select: none;
+  touch-action: manipulation;
+  margin: 5px;
+}
+
+.@{name}-primary {
+  background-color: @primary;
+  color: #fff;
+
+  &:hover {
+    background-color: @lightPrimary;
+  }
+
+  &:active {
+    background-color: #2657d1;
+  }
+}
+
+.@{name}-default {
+  background-color: #fff;
+  border: 1px solid #d9d9d9;
+
+  &:hover {
+    color: #1677ff;
+    border-color: @primary;
+  }
+}
+
+.@{name}-dashed {
+  background-color: #fff;
+  border: 1px dashed #d9d9d9;
+
+  &:hover {
+    color: @primary;
+    border-color: @primary;
+  }
+}
+
+.@{name}-text {
+  background-color: #fff;
+
+  &:hover {
+    background-color: #f0f0f0;
+  }
+}
+
+.@{name}-link {
+  background-color: #fff;
+  color: @primary;
+
+  &:hover {
+    color: @lightPrimary;
+  }
+}
+
+.@{name}-primary.danger {
+  background-color: @danger;
+  color: #fff;
+
+  &:hover {
+    background-color: @lightDanger;
+  }
+}
+
+.@{name}-default.danger {
+  background-color: #fff;
+  border: 1px solid @danger;
+  color: @danger;
+
+  &:hover {
+    color: @lightDanger;
+    border-color: @lightDanger;
+  }
+}
+
+.@{name}-dashed.danger {
+  background-color: #fff;
+  border: 1px dashed @danger;
+  color: @danger;
+
+  &:hover {
+    color: @lightDanger;
+    border-color: @lightDanger;
+  }
+}
+
+.@{name}-text.danger {
+  background-color: #fff;
+  color: @danger;
+
+  &:hover {
+    background-color: @lightDanger;
+  }
+}
+
+.@{name}-link.danger {
+  background-color: #fff;
+  color: @danger;
+
+  &:hover {
+    color: @lightDanger;
+  }
+}
+
+.block {
+  width: 100%;
+}
+
+.small {
+  font-size: 14px;
+  height: 24px;
+  padding: 0px 7px;
+  border-radius: 4px;
+}
+
+.large {
+  font-size: 16px;
+  height: 40px;
+  padding: 6.428571428571429px 15px;
+  border-radius: 8px;
+}
+.left{
+  margin-left: 5px;
+}
+
+button[disabled] {
+  cursor: not-allowed !important;
+  border-color: #d9d9d9 !important;
+  color: rgba(0, 0, 0, 0.25) !important;
+  background-color: rgba(0, 0, 0, 0.04) !important;
+  box-shadow: none !important;
+
+  &:hover {
+    cursor: not-allowed;
+    border-color: #d9d9d9;
+    color: rgba(0, 0, 0, 0.25);
+    background-color: rgba(0, 0, 0, 0.04);
+    box-shadow: none;
+  }
+}

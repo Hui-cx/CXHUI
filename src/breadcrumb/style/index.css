@@ -1,0 +1,12 @@
+.cxh-breadcrumb ol {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.cxh-breadcrumb ol li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+  margin: 0 5px;
+}

@@ -1,0 +1,31 @@
+.icon {
+  vertical-align: middle;
+  fill: currentColor;
+  overflow: hidden;
+}
+
+.box {
+  width: 200px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: #1677ff;
+    color: #fff !important;
+  }
+}
+@keyframes rotate{
+  0%{
+    transform:rotate(0deg)
+  }
+  100%{
+    transform:rotate(360deg)
+  }
+}
+.rotate{
+  animation: rotate 1s linear infinite;
+}

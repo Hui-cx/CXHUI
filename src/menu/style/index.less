@@ -1,0 +1,104 @@
+/* stylelint-disable */
+
+.mk-menu {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  padding-left: 0;
+  list-style: none;
+  border-bottom: 1px solid #dee2e6;
+  box-shadow: inset 0 1px 0 rgba(#fff, .15), 0 1px 1px rgba(#000, .075);
+  > .mk-menu-item {
+    padding: .5rem 1rem;
+    cursor: pointer;
+    transition: color .15s ease-in-out, border-color .15s ease-in-out;
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+    &.is-disabled {
+      color: #6c757d;
+      cursor: default;
+      pointer-events: none;
+    }
+    &.is-active,
+    &:hover {
+      color: #1890ff;
+      border-bottom: 2px solid #1890ff;
+    }
+  }
+  .mk-submenu-item {
+    position: relative;
+    .mk-submenu-title {
+      display: flex;
+      align-items: center;
+    }
+    .arrow-icon {
+      margin-left: 10px;
+      font-size: 12px;
+      transition: transform 0.25s ease-in-out;
+    }
+    &:hover {
+      .arrow-icon {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  .is-inline {
+    .arrow-icon {
+      transform: rotate(0deg) !important;
+    }
+  }
+  .is-inline.is-opened {
+    .arrow-icon {
+      transform: rotate(180deg) !important;
+    }
+  }
+  .mk-submenu {
+    padding-left: 0;
+    white-space: nowrap;
+    list-style: none;
+    transition: color .15s ease-in-out, border-color .15s ease-in-out;
+    .mk-menu-item {
+      padding: .5rem 1rem;
+      color: #212529;
+      cursor: pointer;
+      transition: color .15s ease-in-out, border-color .15s ease-in-out;
+      &.is-active,
+      &:hover {
+        color: #1890ff !important;
+      }
+    }
+  }
+  .mk-submenu.menu-opened {
+    display: block;
+  }
+}
+.mk-menu-horizontal {
+  > .mk-menu-item {
+    border-bottom: 2px solid transparent;
+  }
+  .mk-submenu {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    z-index: 100;
+    background: #fff;
+    border: 1px solid #dee2e6;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .12), 0 0 6px 0 rgba(0, 0, 0, .04);
+  }
+}
+.mk-menu-inline {
+  flex-direction: column;
+  margin: 10px 20px;
+  border-right: 1px solid #dee2e6;
+  border-bottom: 0;
+  > .mk-menu-item {
+    border-left: 2px solid transparent;
+    &.is-active,
+    &:hover {
+      border-bottom: 0;
+      border-left: 2px solid #1890ff;
+    }
+  }
+}

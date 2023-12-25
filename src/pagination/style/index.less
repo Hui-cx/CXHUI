@@ -1,0 +1,43 @@
+@popupPrefix: cxh-pagination;
+
+.@{popupPrefix} {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: rgba(0, 0, 0, 0.88);
+  font-size: 14px;
+  line-height: 1.5714285714285714;
+  list-style: none;
+  display: flex;
+  .@{popupPrefix}-item {
+    display: flex;
+    min-width: 32px;
+    height: 32px;
+    margin-inline-end: 8px;
+    line-height: 30px;
+    text-align: center;
+    vertical-align: middle;
+    list-style: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    outline: 0;
+    cursor: pointer;
+    user-select: none;
+    justify-content: center;
+    align-items: center;
+    &:hover{
+      background-color: #f0f0f0;
+    }
+  }
+  .active{
+    font-weight: 600;
+    background-color: #ffffff;
+    border-color: #1677ff;
+    color: #1677ff;
+    &:hover{
+      background-color: #ffffff;
+    }
+
+  }
+}
